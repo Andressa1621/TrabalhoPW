@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Trabalho de PW</title>
+</head>
+<body>
+	<script>
+		//criação do objeto que vai ficar os produtos no estoque
+		let estoque = {
+			Celular: 150,
+			FoneDeOuvido:55,
+			Pendrive: 37,
+			CaixaDeÁudio:28, 
+			Tablet: 32,
+			CarregadorPortátil: 29,
+
+		}
+
+		//criação do objeto que foram vendidos
+		let vendas = {
+			Celular: 38,
+			FoneDeOuvido:10,
+			Pendrive: 17,
+			CaixaDeÁudio:8, 
+			Tablet: 5,
+			CarregadorPortátil: 15,
+
+		}
+
+		console.log(estoque); //Imprimir resultado do estoque
+		console.log(vendas);  //Imprimir resultado das vendas
+
+		function calc(estoque,vendas){ //Função
+
+			let resto = {};//Objeto
+
+			for(let produto in estoque){//Estrutura de Repetição
+				resto[produto]= estoque[produto] - vendas[produto];//Equação para subtrair o "estoque" das "vendas"
+			}
+			return resto; //restornar os elementos dentro do "resto"
+		}
+
+		let resto = calc(estoque,vendas); //Variável com a função
+
+		console.log(resto);//Imprimir resultado da equação de todos os produtos
+		
+		//Rayane e Andressa
+	</script>
+
+</body>
+</html>
